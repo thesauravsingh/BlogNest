@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/styles/content.css"> <!-- Link to your custom CSS if needed -->
+  <title>BlogNest</title>
+ 
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <i class="fas fa-feather-alt icon"></i>
+      BlogNest
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="/">
+        <i class="fas fa-home icon"></i>
+        Home
+      </a>
+      <a href="/create">
+        <i class="fas fa-pencil-alt icon"></i>
+        Write
+      </a>
+    </div>
+  </header>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+<main>

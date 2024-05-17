@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs"); %>
+
+<form action="<%= edit ? '/update' : '/submit' %>" method="POST" class="form-container">
+    <div class="form-group">
+        <label for="title">Enter your Blog's name:</label>
+        <input type="text" id="title" name="title" value="<%= title %>">
+    </div>
+
+    <div class="form-group">
+        <label for="content">Write your content:</label>
+        <textarea id="content" name="content"><%= content %></textarea>
+    </div>
+
+    <% if (edit && locals.ind) { %>
+        <input type="hidden" name="ind" value="<%= ind %>">
+    <% } %>
+
+    <input type="submit" value="<%= edit ? 'Update' : 'Submit' %>">
+</form>
+
+
+
+<%- include("partials/footer.ejs"); %>
